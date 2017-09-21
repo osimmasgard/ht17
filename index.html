@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class='no-js' lang='en'>
-<!--<![endif]-->
-
+<html lang='sv'>
 <head>
-    <meta charset='utf-8' />
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <meta charset='utf-8'>
     <title>IB908C</title>
-    <link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
-    
+    <link rel="stylesheet" href="lib/css/master.css"/>
+    <script src="lib/js/master.css"></script>    
 </head>
 <body>
 
-<div id="maindiv">
+    <div id="maindiv">
 <h1>1.1</h1>
-<b>Doctype:</b> Doctype är en tag som ofta inleder ett html-dokument (dvs innan head-taggen). Den beskriver vad dokumentet är av för typ, exempelvis kan den se ut så här &lt;!DOCTYPE html&gt;. Taggen hjälper webläsaren att fastställa hur innehållet ska tolkas. Det finns mer komplexa Doctype-taggar än den jag gav som exempel.
-<b>Teckenkod:</b> De tecken vi läser på skärmen kan ha tolkats utifrån olika "teckenkoder" (eng: character encoding). 
+<b>Doctype:</b> Doctype är en tag som ofta inleder ett html-dokument (dvs innan head-taggen). Den beskriver vad dokumentet är av för typ, exempelvis kan den se ut så här &lt;!DOCTYPE html&gt;. Taggen hjälper webläsaren att fastställa hur innehållet ska tolkas, dvs vilken standard av webprogrammeringsspråk eller version som dokumentet innehåller. Det finns mer komplexa Doctype-taggar än den jag gav som exempel. Om ingen Doctype är satt i dokumentet så brukar moderna webläsare hoppa in i ett läge där de har en bredare tolkningsbas och därmed är risken större att dokumentet tolkas på ett felaktigt sätt.
+
+<b>Teckenkodning:</b> De tecken vi läser på skärmen tolkas utifrån olika "teckenkoder" (eng: character encoding). Teckenkoderna berättar för datorn på vilket sätt tecken (bokstäver, siffror etc) ska konverteras till sekvenser av bytes när tecknet väl sparas. När man öppnar en fil där tecknen sparats med en viss teckenkodning så kan datorn utifrån vilket teckenkod filen indikerar att texten sparats i, veta hur den ska tolka de sekvenser av bytes som filen innehåller. Har filen specifikt ingen teckenkodning angiven så brukar datorn försöka tolka filen utifrån ett defaultvärde. 
+
+<b>Språk:</b> Här syftas på naturligt språk och inte programmeringsspråk. I formen &lt;html lang=en6-gt; så indikerar man i html-dokumentet i vilket språk (i detta exempel engelska) som elementet är skrivet. Informationen är nyttig för sökmotorer bland annat, så att användaren som söker efter något också kan ange att denne bara vill se söksvar i ett visst språk. Vill du enkelt sätta språk för en hel sida så kan du göra detta genom att specifiera i html-taggen vilket språk som gäller &gt;html lang="sv"&lt;.
+
+<b>Validering:</b> I webprogrammeringsvärlden kan man ibland behöva hjälp att validera sina html-dokument (och även script-filer) gentemot den standard man strävar efter att följa. För att göra det enkelt för sig kan man låta en så kallad "validator" läsa igenom dokumentet - ger den ett OK på att dokumentet uppfyller den standard man vill så är allt frid och fröjd, annars kommer validatorn säga till att något inte är korrekt. Validatorer brukar ofta trigga både på syntaktiska fel och avvikelser från den eftersträvade standarden.
+
+<b>Hur ett HTML-dokument är uppbyggt:</b> Ett HTML-dokumentet är i grund och botten en textfil med en speciell syntax. Med hjälp av så kallade "taggar" så bygger man i denna texfil upp en struktur med målet att filen ska kunna läsas och tolkas av en webläsare. Inom HTML:ens värld så finns olika standarder och inom denna kurs ägnar vi oss främst åt HTML5. Det finns en uppsjö av taggar att använda men några sticker ut som obligatoriska för att sidan ska kunna tolkas av en webläsare över huvud taget, även om moderna webläsare är väldigt toleranta. Exempel på sådana taggar är &gt;body&lt;, &gt;head&lt; etc.
+
+
+
+
 </div>
 </body>
 </html>
