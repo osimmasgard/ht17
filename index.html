@@ -165,8 +165,10 @@
     <h4>Bildlänk</h4> Om man vill att länken ska vara en klickbar bild så lägger man till attributet "src=" och pekar där på
     en bild (relativt eller absolut). Då kommer en bild visas på platsen och när man klickar den så kommer man till länkens
     mål. Exempel:
-    <code>&gt;a src="lib/images/fot.png" href="#fotnot"&lt;&gt;/a&lt;
-        <a href="#fotnot" src="lib/images/fot.png"></a>
+    <code>&lt;a href="#fotnot" &gt; &lt;img src="lib/images/fot.png"&gt;&lt;/a&gt;
+        <a href="#fotnot">
+            <img src="lib/images/fot.png">
+        </a>
     </code>
 
     <h4>Andra protokoll</h4> Man kan referera till andra protokoll än http i länkar, då måste man dock ange en absolut url där
@@ -231,7 +233,8 @@
 
     <h4>Beskriven lista</h4>
     <p>En sista typ av lista är den så kallade "beskrivna listan" som har detta utseende. Man använder för att beskriva saker
-        lämpligen.</p>
+        lämpligen.
+    </p>
 
     <dl>
         <code>&lt;dl&gt;</code>
