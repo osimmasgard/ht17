@@ -10,193 +10,277 @@
 
     <div id="maindiv">
         <h1>1.1 Grunderna i HTML5</h1>
-        <p><b>Doctype:</b> Doctype är en tag som ofta inleder ett html-dokument (dvs innan head-taggen). Den beskriver vad dokumentet
-            är av för typ, exempelvis kan den se ut så här <code>&lt;!DOCTYPE html&gt;</code>. Taggen hjälper webläsaren
-            att fastställa hur innehållet ska tolkas, dvs vilken standard av webprogrammeringsspråk eller version som dokumentet
-            innehåller. Det finns mer komplexa Doctype-taggar än den jag gav som exempel. Om ingen Doctype är satt i dokumentet
-            så brukar moderna webläsare hoppa in i ett läge där de har en bredare tolkningsbas och därmed är risken större
-            att dokumentet tolkas på ett felaktigt sätt.</p>
+        <p>
+            <b>Doctype:</b> Doctype är en tag som ofta inleder ett html-dokument (dvs innan head-taggen). Den beskriver vad
+            dokumentet är av för typ, exempelvis kan den se ut så här
+            <code>&lt;!DOCTYPE html&gt;</code>. Taggen hjälper webläsaren att fastställa hur innehållet ska tolkas, dvs vilken
+            standard av webprogrammeringsspråk eller version som dokumentet innehåller. Det finns mer komplexa Doctype-taggar
+            än den jag gav som exempel. Om ingen Doctype är satt i dokumentet så brukar moderna webläsare hoppa in i ett
+            läge där de har en bredare tolkningsbas och därmed är risken större att dokumentet tolkas på ett felaktigt sätt.</p>
 
-        <p><b>Teckenkodning:</b> De tecken vi läser på skärmen tolkas utifrån olika "teckenkoder" (eng: character encoding).
+        <p>
+            <b>Teckenkodning:</b> De tecken vi läser på skärmen tolkas utifrån olika "teckenkoder" (eng: character encoding).
             Teckenkoderna berättar för datorn på vilket sätt tecken (bokstäver, siffror etc) ska konverteras till sekvenser
             av bytes när tecknet väl sparas. När man öppnar en fil där tecknen sparats med en viss teckenkodning så kan datorn
             utifrån vilket teckenkod filen indikerar att texten sparats i, veta hur den ska tolka de sekvenser av bytes som
             filen innehåller. Har filen specifikt ingen teckenkodning angiven så brukar datorn försöka tolka filen utifrån
             ett defaultvärde. </p>
 
-        <p><b>Språk:</b> Här syftas på naturligt språk och inte programmeringsspråk. I formen &lt;html lang=en6-gt; så indikerar
+        <p>
+            <b>Språk:</b> Här syftas på naturligt språk och inte programmeringsspråk. I formen &lt;html lang=en6-gt; så indikerar
             man i html-dokumentet i vilket språk (i detta exempel engelska) som elementet är skrivet. Informationen är nyttig
             för sökmotorer bland annat, så att användaren som söker efter något också kan ange att denne bara vill se söksvar
             i ett visst språk. Vill du enkelt sätta språk för en hel sida så kan du göra detta genom att specifiera i html-taggen
-            vilket språk som gäller <code>&lt;html lang="sv"&gt;</code>.</p>
+            vilket språk som gäller
+            <code>&lt;html lang="sv"&gt;</code>.</p>
 
-        <p><b>Validering:</b> I webprogrammeringsvärlden kan man ibland behöva hjälp att validera sina html-dokument (och även
+        <p>
+            <b>Validering:</b> I webprogrammeringsvärlden kan man ibland behöva hjälp att validera sina html-dokument (och även
             script-filer) gentemot den standard man strävar efter att följa. För att göra det enkelt för sig kan man låta
             en så kallad "validator" läsa igenom dokumentet - ger den ett OK på att dokumentet uppfyller den standard man
             vill så är allt frid och fröjd, annars kommer validatorn säga till att något inte är korrekt. Validatorer brukar
             ofta trigga både på syntaktiska fel och avvikelser från den eftersträvade standarden.</p>
 
-        <p><b>Hur ett HTML-dokument är uppbyggt:</b> Ett HTML-dokumentet är i grund och botten en textfil med en speciell syntax.
+        <p>
+            <b>Hur ett HTML-dokument är uppbyggt:</b> Ett HTML-dokumentet är i grund och botten en textfil med en speciell syntax.
             Med hjälp av så kallade "taggar" så bygger man i denna texfil upp en struktur med målet att filen ska kunna läsas
             och tolkas av en webläsare. Inom HTML:ens värld så finns olika standarder och inom denna kurs ägnar vi oss främst
             åt HTML5. Det finns en uppsjö av taggar att använda men några sticker ut som obligatoriska för att sidan ska
             kunna tolkas av en webläsare över huvud taget, även om moderna webläsare är väldigt toleranta. Exempel på sådana
-            taggar är <code>&lt;body&gt;</code>, <code>&lt;head&gt;</code> etc.</p>
+            taggar är
+            <code>&lt;body&gt;</code>,
+            <code>&lt;head&gt;</code> etc.</p>
 
 
         <h2>Beskrivningar och exempel på några vanliga typer av taggar</h2>
-       
+
         <h3>Struktur-taggar</h3>
-        <p><b><code>&lt;head&gt;</code></b> 
-        Som namnet antyder så är detta en tag som befinner sig högt upp i html-dokumentet. Den innehåller en rad definitioner och deklarationer som gäller för resten av sidan. </p>
-        <p><b><code>&lt;body&gt;</code></b>
-        I body-taggen så befinner sig den del av websidan som användaren ser i sin webläsare, dvs text och bild.</p>
-        <p><b><code>&lt;html&gt;</code></b>
-        Html-taggen används för att definera start och slut på sidan, ur ett html-perspektiv.
-        Den är enligt html5-standarden valfri precis de &lt;html&gt; och &lt;body&gt; faktiskt är, det är upp till programmerarens
-        val av "programmeringsstil" om hen vill ha dem med eller inte.</p>
-        <p><b><code>&lt;title&gt;</code></b>
-        Här kan man ange sidans titel som många webläsare sätter i webläsarfönstrets
-        övre kant.</p>
+        <p>
+            <b>
+                <code>&lt;head&gt;</code>
+            </b>
+            Som namnet antyder så är detta en tag som befinner sig högt upp i html-dokumentet. Den innehåller en rad definitioner och
+            deklarationer som gäller för resten av sidan. </p>
+        <p>
+            <b>
+                <code>&lt;body&gt;</code>
+            </b>
+            I body-taggen så befinner sig den del av websidan som användaren ser i sin webläsare, dvs text och bild.</p>
+        <p>
+            <b>
+                <code>&lt;html&gt;</code>
+            </b>
+            Html-taggen används för att definera start och slut på sidan, ur ett html-perspektiv. Den är enligt html5-standarden valfri
+            precis de &lt;html&gt; och &lt;body&gt; faktiskt är, det är upp till programmerarens val av "programmeringsstil"
+            om hen vill ha dem med eller inte.</p>
+        <p>
+            <b>
+                <code>&lt;title&gt;</code>
+            </b>
+            Här kan man ange sidans titel som många webläsare sätter i webläsarfönstrets övre kant.</p>
 
         <h2>Meta-taggar</h2>
         <p>Meta-taggen innehåller information med data om sidan. Här är några vanliga name-attribut</p>
-        <p><b>author </b> här specificerar man vem som skrivit sidan. Exempel: <code>&lt;meta name="author" content="Olle Simmasgård" &gt;</code> </p>
-        <p><b>description </b> här sparar man en kort beskrivning av sidan. Exempel: <code>&lt;meta name="description" content="Lösningar till uppgifter inom kursen IB908C" &gt;</code> </p>
-        <p><b>generator </b> här står namnet på den programvara man använde för att skapa sidan. Exempel: <code>&lt;meta name="generator" content="Visual Studio Code"&gt;</code></p>
-        <p><b>keywords </b> kan innehålla en kommaseparerad lista av nyckelord som är relevanta för sidans innehåll. Exempel: <code>&lt;meta name="keywords" content="html5,taggar" &gt; </code></p>
-        <p><b>robots </b> denna vänder sig till de robotar som kontinuerligt scannar av websidor, exempelvis googles sökindexerare. Man kan här säga till roboten att man inte vill ha sidan indexerad eller dylikt, roboten behöver förstås inte följa önskemålet. Exempel: <code>&lt;meta  name="robots" content="NOINDEX, NOFOLLOW"&gt;</code></p>
+        <p>
+            <b>author </b> här specificerar man vem som skrivit sidan. Exempel:
+            <code>&lt;meta name="author" content="Olle Simmasgård" &gt;</code>
+        </p>
+        <p>
+            <b>description </b> här sparar man en kort beskrivning av sidan. Exempel:
+            <code>&lt;meta name="description" content="Lösningar till uppgifter inom kursen IB908C" &gt;</code>
+        </p>
+        <p>
+            <b>generator </b> här står namnet på den programvara man använde för att skapa sidan. Exempel:
+            <code>&lt;meta name="generator" content="Visual Studio Code"&gt;</code>
+        </p>
+        <p>
+            <b>keywords </b> kan innehålla en kommaseparerad lista av nyckelord som är relevanta för sidans innehåll. Exempel:
+            <code>&lt;meta name="keywords" content="html5,taggar" &gt; </code>
+        </p>
+        <p>
+            <b>robots </b> denna vänder sig till de robotar som kontinuerligt scannar av websidor, exempelvis googles sökindexerare.
+            Man kan här säga till roboten att man inte vill ha sidan indexerad eller dylikt, roboten behöver förstås inte
+            följa önskemålet. Exempel:
+            <code>&lt;meta name="robots" content="NOINDEX, NOFOLLOW"&gt;</code>
+        </p>
         <p>Här är ett speciellt attribut</p>
-        <p><b>http-equiv </b> denna tag har ett liknande syfte som dokumentets head-sektion. Den bidrar med information till webläsaren om saker såsom "content-type", "expired" (som berättar för webläsaren att sidans innehåll "går ut" vid en specifik tid och att den då ska ladda om sidan). Den kan också användas för att skapa en cookie och sätta dess innehåll. <code>&lt;meta  http-equiv="content-encoding" content="gzip"&gt;</code> </p>
+        <p>
+            <b>http-equiv </b> denna tag har ett liknande syfte som dokumentets head-sektion. Den bidrar med information till
+            webläsaren om saker såsom "content-type", "expired" (som berättar för webläsaren att sidans innehåll "går ut"
+            vid en specifik tid och att den då ska ladda om sidan). Den kan också användas för att skapa en cookie och sätta
+            dess innehåll.
+            <code>&lt;meta http-equiv="content-encoding" content="gzip"&gt;</code>
+        </p>
     </div>
 
 
 
-<b>abbr:</b> En förkortning för engelskans "abbreviation" och ska användas när man vill visa att något är i förkortad form,
-exempelvis <code>&gt;abbr&lt;ex&gt;/abbr&lt;</code> som är en förkortning för "exempel".
-<b>blockquote:</b> Används för att visa att att texten inom taggen är ett citat hämtat från en annan källa. <code>&gt;blockquoute&lt; dada &gt;/blockquoute&lt;</code>sade min dotter precis.
-<b>h1 - h6:</b> Man kan använda h1-h6 för att bygga upp en hierarki av rubriker i ett dokument. De olika taggarna kommer
-har ett passande typografiskt förhållande där h1 har den största fonten och kan användas för exempelvis namnet på dokumentet
-och h6 har den minsta och kan användas för en underrubrik till en underrubrik. Exempelvis:
-<code>
-&gt;h1&lt;IB908C&gt;/h1&lt;
+    <b>abbr:</b> En förkortning för engelskans "abbreviation" och ska användas när man vill visa att något är i förkortad form,
+    exempelvis
+    <code>&gt;abbr&lt;ex&gt;/abbr&lt;</code> som är en förkortning för "exempel".
+    <b>blockquote:</b> Används för att visa att att texten inom taggen är ett citat hämtat från en annan källa.
+    <code>&gt;blockquoute&lt; dada &gt;/blockquoute&lt;</code>sade min dotter precis.
+    <b>h1 - h6:</b> Man kan använda h1-h6 för att bygga upp en hierarki av rubriker i ett dokument. De olika taggarna kommer
+    har ett passande typografiskt förhållande där h1 har den största fonten och kan användas för exempelvis namnet på dokumentet
+    och h6 har den minsta och kan användas för en underrubrik till en underrubrik. Exempelvis:
+    <code>
+        &gt;h1&lt;IB908C&gt;/h1&lt; &gt;h2&lt; Inledning &gt;/h2&lt; &gt;h3&lt; Observera &gt;/h3&lt; &gt;h2&lt; Uppgifter &gt;/h2&lt;
+        &gt;h3&lt; 1.1&gt;/h3&lt; &gt;h4&lt; 1.1.1 &gt;/h4&lt; &gt;h5&lt; 1.1.1.1 &gt;/h5 &gt;h6&lt; 1.1.1.1.1 &gt;/h6&lt;
+    </code>
+    <b>p</b> "P" står för "paragraph" och kan användas för att markera ett textstycke. Den kommer automatiskt att avslutas med
+    en tom rad i förhållande till nästa objekt i dokumentet. Exempelvis:
+    <code>&gt;p&lt; Här är ett stycke text, efter stycket kommer det automatiskt tillfogas en ny rad (om man inte åsidosätter detta
+        mha CSS &gt;/p&lt;</code>
 
-&gt;h2&lt; Inledning &gt;/h2&lt;
-
-&gt;h3&lt; Observera &gt;/h3&lt;
-
-&gt;h2&lt; Uppgifter &gt;/h2&lt;
-&gt;h3&lt; 1.1&gt;/h3&lt;
-&gt;h4&lt; 1.1.1 &gt;/h4&lt;
-&gt;h5&lt; 1.1.1.1 &gt;/h5
-&gt;h6&lt; 1.1.1.1.1 &gt;/h6&lt;
-</code>
-<b>p</b> "P" står för "paragraph" och kan användas för att markera ett textstycke. Den kommer automatiskt att avslutas med
-en tom rad i förhållande till nästa objekt i dokumentet. Exempelvis: <code>&gt;p&lt; Här är ett stycke text, efter stycket kommer det automatiskt tillfogas en ny  rad (om man inte åsidosätter detta mha CSS &gt;/p&lt;</code>
-
-<b>pre:</b> Text inom denna tagg visas med fast teckenbredd (oftast i teckensnittet "Courier") och radbrytningar och mellanslag
-bevaras utan att kortas ner eller tas bort. Exempelvis <code>&gt;pre&lt; <pre>Här kommer ett stycke med exempelvis tre st mellanslag i rad   och nu ett radbryt 
+    <b>pre:</b> Text inom denna tagg visas med fast teckenbredd (oftast i teckensnittet "Courier") och radbrytningar och mellanslag
+    bevaras utan att kortas ner eller tas bort. Exempelvis
+    <code>&gt;pre&lt;
+        <pre>Här kommer ett stycke med exempelvis tre st mellanslag i rad   och nu ett radbryt 
     som jag vill ska bevaras</pre>&gt;/pre&lt; </code>
 
-<b>span:</b> Denna tag har inget speciellt default-beteende utan används ofta tillsammans med CSS för att sätta ett speciellt
-beteende på exempelvis ett stycke text. <code>&gt;span&lt; <span>Här händer ingenting speciellt med texten</span>&gt;/span&lt;</code>Länkar!
-<b>a:</b> &gt;a&lt; är en väldigt vanlig tagg då den används för att skapa länkar. Den har olika attribut som används för
-att styra hur länkarna ska fungera.
+    <b>span:</b> Denna tag har inget speciellt default-beteende utan används ofta tillsammans med CSS för att sätta ett speciellt
+    beteende på exempelvis ett stycke text.
+    <code>&gt;span&lt;
+        <span>Här händer ingenting speciellt med texten</span>&gt;/span&lt;</code>Länkar!
+    <b>a:</b> &gt;a&lt; är en väldigt vanlig tagg då den används för att skapa länkar. Den har olika attribut som används för
+    att styra hur länkarna ska fungera.
 
-<h4>Relativa/absoluta länkar</h4>En "relativ" länk är en länk som pekar på något under samma bas-url som sidan man är på, exempelvis
-<code>&gt;a&lt;<a href="samelevel.html">En sida som länkas "relativt"</a></code>. Om sidan som sidan står på har adressen
-home.swipnet.se/~olsim/index.html så är en relativ länk en som pekar på en sida som ligger under home.swipnet.se/~olsim/
-och en absolut länk en som innehåller en fullständig adress så som exempelvis http://www.lysator.liu.se/lib/boklista.txt
+    <h4>Relativa/absoluta länkar</h4>En "relativ" länk är en länk som pekar på något under samma bas-url som sidan man är på,
+    exempelvis
+    <code>&gt;a&lt;
+        <a href="samelevel.html">En sida som länkas "relativt"</a>
+    </code>. Om sidan som sidan står på har adressen home.swipnet.se/~olsim/index.html så är en relativ länk en som pekar på en
+    sida som ligger under home.swipnet.se/~olsim/ och en absolut länk en som innehåller en fullständig adress så som exempelvis
+    http://www.lysator.liu.se/lib/boklista.txt
 
-<h4>Ankare</h4> Med hjälp av attributet "id" kan man ge taggarna i ett html-dokument ett id. Med hjälp av en hyperlänk kan man
-sen peka till ett sådant id och på så vis skapa länkar på samma sida man är på (dvs man kan få användaren att hoppa till
-ett annat ställe på sidan). Exempelvis så skapar jag ett textstycke med id:t "fotnot" såsom så här <code>&lt;span id="fotnot"&gt; <span id="fotnot">Detta är en fotnot</span>&gt;/span&lt;</code>.
-Jag kan därefter skapa en länk till fotnoten var som helst på sidan och när användaren klickar på den så kommer han hoppa
-till fotnoten. <code>&gt;a href="#fotnot"&lt; <a href="#fotnot"> klicka här för att komma till fotnoten</a>&gt;/a&lt;</code>
+    <h4>Ankare</h4> Med hjälp av attributet "id" kan man ge taggarna i ett html-dokument ett id. Med hjälp av en hyperlänk kan
+    man sen peka till ett sådant id och på så vis skapa länkar på samma sida man är på (dvs man kan få användaren att hoppa
+    till ett annat ställe på sidan). Exempelvis så skapar jag ett textstycke med id:t "fotnot" såsom så här
+    <code>&lt;span id="fotnot"&gt;
+        <span id="fotnot">Detta är en fotnot</span>&gt;/span&lt;</code>. Jag kan därefter skapa en länk till fotnoten var som helst på sidan
+    och när användaren klickar på den så kommer han hoppa till fotnoten.
+    <code>&gt;a href="#fotnot"&lt;
+        <a href="#fotnot"> klicka här för att komma till fotnoten</a>&gt;/a&lt;</code>
 
-<h4>Bildlänk</h4> Om man vill att länken ska vara en klickbar bild så lägger man till attributet "src=" och pekar där på en bild
-(relativt eller absolut). Då kommer en bild visas på platsen och när man klickar den så kommer man till länkens mål. Exempel:
-<code>&gt;a src="lib/images/fot.png" href="#fotnot"&lt;&gt;/a&lt;<a href="#fotnot" src="lib/images/fot.png"></a></code>
+    <h4>Bildlänk</h4> Om man vill att länken ska vara en klickbar bild så lägger man till attributet "src=" och pekar där på
+    en bild (relativt eller absolut). Då kommer en bild visas på platsen och när man klickar den så kommer man till länkens
+    mål. Exempel:
+    <code>&gt;a src="lib/images/fot.png" href="#fotnot"&lt;&gt;/a&lt;
+        <a href="#fotnot" src="lib/images/fot.png"></a>
+    </code>
 
-<h4>Andra protokoll</h4> Man kan referera till andra protokoll än http i länkar, då måste man dock ange en absolut url där protokolltypen
-är med. Exempelvis <code>&gt;a href="ftp://ftp.lysator.liu.se/"&lt;ftp://ftp.lysator.liu.se/&gt;/a&lt; <a href="ftp://ftp.lysator.liu.se/">ftp://ftp.lysator.liu.se/</a></code>
+    <h4>Andra protokoll</h4> Man kan referera till andra protokoll än http i länkar, då måste man dock ange en absolut url där
+    protokolltypen är med. Exempelvis
+    <code>&gt;a href="ftp://ftp.lysator.liu.se/"&lt;ftp://ftp.lysator.liu.se/&gt;/a&lt;
+        <a href="ftp://ftp.lysator.liu.se/">ftp://ftp.lysator.liu.se/</a>
+    </code>
 
-<h4>Mailto</h4> Genom att skriva <code>&gt;a href="mailto:kasi0365@student.su.se"&lt; <a href="mailto:kasi0365@student.su.se"> Maila mig! &gt;/a&lt; </a></code>så säger man till webläsaren att länken är en mailadress och denne kommer då (oftast) försöka öppna upp ditt mailprogram
-och skapa ett nytt mail till den adressen.
+    <h4>Mailto</h4> Genom att skriva
+    <code>&gt;a href="mailto:kasi0365@student.su.se"&lt;
+        <a href="mailto:kasi0365@student.su.se"> Maila mig! &gt;/a&lt; </a>
+    </code>så säger man till webläsaren att länken är en mailadress och denne kommer då (oftast) försöka öppna upp ditt mailprogram
+    och skapa ett nytt mail till den adressen.
 
-<h4>Listor</h4> Det finns stöd för olika typer av listor i html. 
+    <h4>Listor</h4> Det finns stöd för olika typer av listor i html.
 
- <p>
-     En ordnad lista är en lista som
-    "räknar upp", antingen med en siffra, en bokstav, eller "I" per rad. Så här:
- </p>
+    <p>
+        En ordnad lista är en lista som "räknar upp", antingen med en siffra, en bokstav, eller "I" per rad. Så här:
+    </p>
 
-<p>
-    <code>&lt;ol type="1"&gt;<ol type="1">
-<li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
-<li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
-<li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
-<li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>   
-&lt;/ol&gt;</ol></code> <br>
-<code>
-&lt;ol type="A"&gt;
-<ol type="A">
- <li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
- <li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
- <li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
- <li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>   
- &lt;/ol&gt;
-</ol>
-</code>
-    <code>&lt;ol type="I"&gt;<br>
-        <ol type="I">
-            <li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
-            <li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
-            <li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
-            <li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>
-            &lt;/ol&gt;</ol></code>
-</p>
+    <p>
+        <code>&lt;ol type="1"&gt;
+            <ol type="1">
+                <li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>
+                &lt;/ol&gt;</ol>
+        </code>
+        <br>
+        <code>
+            &lt;ol type="A"&gt;
+            <ol type="A">
+                <li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>
+                &lt;/ol&gt;
+            </ol>
+        </code>
+        <code>&lt;ol type="I"&gt;
+            <br>
+            <ol type="I">
+                <li>&lt;li&gt; första saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; andra &nbsp;saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; tredje saken på listan &lt;/li&gt;</li>
+                <li>&lt;li&gt; fjärde saken på listan &lt;/li&gt;</li>
+                &lt;/ol&gt;</ol>
+        </code>
+    </p>
 
-<p>En oordnad lista ser ut så här, ett vanligt namn är "bullet list". Märk väl att i båda listorna så används taggen "li" för att beskriva ett "list item".</p>
+    <p>En oordnad lista ser ut så här, ett vanligt namn är "bullet list". Märk väl att i båda listorna så används taggen "li"
+        för att beskriva ett "list item".</p>
 
-<code>&lt;ul&gt;<ul>
-    <li>&lt;li&gt;Sak i oordning&lt;/li&gt;</li>
-    <li>&lt;li&gt;Sak i oordning&lt;/li&gt;</li>
-    <li>&lt;li&gt; Sak i oordning&lt;/li&gt;</li>
-</ul></code>
+    <code>&lt;ul&gt;
+        <ul>
+            <li>&lt;li&gt;Sak i oordning&lt;/li&gt;</li>
+            <li>&lt;li&gt;Sak i oordning&lt;/li&gt;</li>
+            <li>&lt;li&gt; Sak i oordning&lt;/li&gt;</li>
+        </ul>
+    </code>
 
-<h4>Beskriven lista</h4>
-<p>En sista typ av lista är den så kallade "beskrivna listan" som har detta utseende. Man använder för att beskriva saker lämpligen.</p>
+    <h4>Beskriven lista</h4>
+    <p>En sista typ av lista är den så kallade "beskrivna listan" som har detta utseende. Man använder för att beskriva saker
+        lämpligen.</p>
 
-    <dl><code>&lt;dl&gt;</code>
-            <dt><code>&lt;dt&gt;</code>HTML<code>&lt;/dt&gt;</code></dt>
-            <dd><code>&lt;dd&gt;</code>Ett programmeringsspråk<code>&lt;/dd&gt;</code></dd>
-            <dt></dt><code>&lt;dt&gt;</code>XML<code>&lt;/dt&gt;</code></dt>
-            <dd><code>&lt;dd&gt;</code>Ett annat programmeringsspråk<code>&lt;/dd&gt;</code></dd>
-            <code>&lt;/dl&gt;</code> 
+    <dl>
+        <code>&lt;dl&gt;</code>
+        <dt>
+            <code>&lt;dt&gt;</code>HTML
+            <code>&lt;/dt&gt;</code>
+        </dt>
+        <dd>
+            <code>&lt;dd&gt;</code>Ett programmeringsspråk
+            <code>&lt;/dd&gt;</code>
+        </dd>
+        <dt></dt>
+        <code>&lt;dt&gt;</code>XML
+        <code>&lt;/dt&gt;</code>
+        </dt>
+        <dd>
+            <code>&lt;dd&gt;</code>Ett annat programmeringsspråk
+            <code>&lt;/dd&gt;</code>
+        </dd>
+        <code>&lt;/dl&gt;</code>
     </dl>
 
 
-<h4>Tabeller</h4>
-<p>Tabeller har en uppsättning taggar som beskriver tabellens namn, tabellrader, tabellhuvuden och tabelldata
-    <code>&lt;caption&gt;</code> beskriver tabellens innehåll.
-    <code>&lt;table&gt;</code> är taggen man använder för att starta en tabell
-    <code>&lt;tr&gt;</code> är taggen som används för att delimitera en tabellrad
-    <code>&lt;td&gt;</code> är taggen som används för att markera tabelldata, dvs kolumnerna. Märk väl att varje tabellrad måste innehålla lika många tabelldatataggar för att tabellen ska bli helt korrekt. 
-<h4>Bilder</h4>
-<p>Med hjälp av <code>&lt;img&gt;-taggen så får du in bilder på din sida. Taggen innehåller en referens till var webläsaren ska hämta bilden ifrån och likt hyperlänkar så kan detta vara en relativ eller absolut referens.</code></p>
-<h4>Map/area</h4>
-<p>Med hjälp av dessa taggar kan man skapa områden i en bild som är klickbara länkar till andra sidor eller som bara gör att muspekaren får en text när man hovrar över något av de områden man specificerat. Map-taggen är sammankopplad med en img-tagg med hjälp av sitt "name"-attribut och "usemap"-attributet i image-taggen.</p>
+    <h4>Tabeller</h4>
+    <p>Tabeller har en uppsättning taggar som beskriver tabellens namn, tabellrader, tabellhuvuden och tabelldata
+        <code>&lt;caption&gt;</code> beskriver tabellens innehåll.
+        <code>&lt;table&gt;</code> är taggen man använder för att starta en tabell
+        <code>&lt;tr&gt;</code> är taggen som används för att delimitera en tabellrad
+        <code>&lt;td&gt;</code> är taggen som används för att markera tabelldata, dvs kolumnerna. Märk väl att varje tabellrad
+        måste innehålla lika många tabelldatataggar för att tabellen ska bli helt korrekt.
+        <h4>Bilder</h4>
+        <p>Med hjälp av
+            <code>&lt;img&gt;-taggen så får du in bilder på din sida. Taggen innehåller en referens till var webläsaren ska hämta
+                bilden ifrån och likt hyperlänkar så kan detta vara en relativ eller absolut referens.</code>
+        </p>
+        <h4>Map/area</h4>
+        <p>Med hjälp av dessa taggar kan man skapa områden i en bild som är klickbara länkar till andra sidor eller som bara
+            gör att muspekaren får en text när man hovrar över något av de områden man specificerat. Map-taggen är sammankopplad
+            med en img-tagg med hjälp av sitt "name"-attribut och "usemap"-attributet i image-taggen.</p>
 
-Exempel:
+        Exempel:
 
-<img src="fot.png" alt="En fot" usemap="fotdelar"> 
+        <img src="fot.png" alt="En fot" usemap="fotdelar">
 
-<map name="fotdelar">
-    <area shape="circle" coords="0,0,80,80" href="" alt="fotdynan">
-    <area shape="circle" coords="" href="" alt="stortå">
-    <area shape="circle" coords="" href="" alt="häl">
-</map>
+        <map name="fotdelar">
+            <area shape="circle" coords="0,0,80,80" href="" alt="fotdynan">
+            <area shape="circle" coords="" href="" alt="stortå">
+            <area shape="circle" coords="" href="" alt="häl">
+        </map>
 </body>
 
 </html>
