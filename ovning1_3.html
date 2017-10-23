@@ -5,7 +5,9 @@
     <meta charset='utf-8'>
     <title>IB908C</title>
 </head>
-<header><h1>Övning 1.3</h1></header>
+<header>
+    <h1>Övning 1.3</h1>
+</header>
 <p>Här kommer en kort text som beskriver elementen
     <code>&lt;mark&gt;, &lt;date&gt;</code>, inklusive datetime-attributet och slutligen
     <code>&lt;wbr&gt;.</code>
@@ -19,7 +21,24 @@
     <mark>gulmarkerad.</mark>
 </p>
 
+<p>
+    Med
+    <code>&lt;time&gt;</code>-elementet så berättar man för maskinen som tolkar texten att här finns något som beskriver tid och/eller
+    datum. Med attributet
+    <code>datetime</code> så adderar man ytterligare tydlighet genom att lägga till formatet på den tid/datum man skrivit, det
+    finns också möjlighet att ange i vilken tidszon tiden gäller. Kombinerat kan detta se ut så här
+    <code>&lt;time datetime="2017-08-27T05:15+1:00"&gt;</code>, där stora "T" markerar att texten efter är tid inklusive tidszon
+    (justeringen från UTC).
+</p>
 
+<p>Taggen
+    <code>&lt;wbr&gt;</code> används för att markera platser för "valfria ordbrytningar". Med detta menas att webläsaren tillåts
+    bryta ordet på det stället man markerat med hjälp av
+    <code>&lt;wbr&gt;</code> om det behövs för att göra sidan mer läsbar. Ett exempel på detta kan se ut så här Flaggstångs
+    <code>&lt;wbr&gt;</code>
+    <wbr> putspolerar
+    <code>&lt;wbr&gt;</code>
+    <wbr>trasa.
 </p>
 
 <body>
