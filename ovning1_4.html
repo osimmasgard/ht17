@@ -2,34 +2,120 @@
 <html lang='sv'>
 
 <head>
-<meta charset='utf-8'>
-<title>IB908C</title>
+    <meta charset='utf-8'>
+    <title>IB908C</title>
 </head>
 
 <body>
-
+    <header>
+        <h1>Övning 1.4</h1>
+    </header>
     <form action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.1/perl/example.cgi">
-    
-    <fieldset>
-        Vad är ditt namn? <input type="text" autofocus>
-        Skriv ett lösenord du kan <input type="password" name="" id="">
-        Skriv en kort beskrivning av en bil <input type="area">
-        Bocka i denna om du gillar att åka bil <input type="checkbox" name="" id="">
-        <optgroup>
-            <option value="asdf">Första raden</option>
-            <option value="qwerty">Andra raden</option>
-            <option value="zxcv">Tredje raden</option>
-        </optgroup>
-        <input type="radio" name="" id="">
-        <input type="submit" name="" id="">
-        <input type="image" name="" id="">
-        <input type="reset" name="" id="">
-        <input type="button" name="" id="">
-        
-        
-    </fieldset>
+
+        <fieldset>
+            <legend>Om dig</legend>
+            <p>
+                <label for="name">Vad är ditt namn?*</label>
+                <input type="text" name="name" placeholder="Olle Simmasgård" autofocus required title="För och efternamn tack" pattern="([A-zÀ-ž\s\-]){2,}">
+            </p>
+            <p>
+                <label for="password">Skriv ett lösenord*</label>
+                <input type="password" name="password" required>
+            </p>
+            <p>
+                <label for="reason">Berätta varför du vill gå med i gruppen*</label>
+                <input type="area" name="reason" rows="4" cols="50" required>
+            </p>
+            <p>
+                <label for="checkbox">Bocka i denna om du har en bil</label>
+                <input type="checkbox" name="checkbox">
+            </p>
+            <p>
+                <label for="email">Din emailadress</label>
+                <input type="email" name="email" required title="Fyll i din emailadress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </p>
+            <p>
+                <label for="url">Fyll i adressen till din hemsida</label>
+                <input type="url" name="url">
+            </p>
+            <p>
+                <label for="age" name="ålder">Fyll i din ålder</label>
+                <input type="number" min="0" max="120" step="1">
+            </p>
+            <p>
+                <label for="range">Hur mycket gillar du att åka berg-och-dalbana?</label>
+                <input type="range" name="range" min="1" max="10" step="1">
+            </p>
+
+            <p>
+                <label for="datetime">Vilken tid vill du bli upphämtad?</label>
+                <input type="datetime-local" name="upphämtning">
+            </p>
+            <p>
+                <label for="date">Vad är dagens datum?</label>
+                <input type="date" name="datum">
+            </p>
+            <p>
+                <label for="month">Vilken månad och år är det nu?</label>
+                <input type="month" name="månad">
+            </p>
+            <p>
+                <label for="week">Vilken vecka och år är det nu?</label>
+                <input type="week" name="vecka">
+            </p>
+
+            <p>
+                <label for="time">Vad är klockan nu?</label>
+                <input type="time" name="tid">
+            </p>
+            <p>
+                <label for="stol">Vad sitter du i nu?</label>
+                <input list="stol">
+                <datalist id="stol" name="stol">
+                    <option value="Soffa">
+                        <option value="Fotölj">
+                            <option value="Kontorsstol">
+                                <option value="Köksstol">
+                                    <option value="Barstol">
+                </datalist>
+            </p>
+
+        </fieldset>
+        <Select name="hus">
+            <optgroup label="Hustyper">
+                <option value="villa">Villa</option>
+                <option value="radhus">Radhus</option>
+                <option value="sommarhus">Sommarhus</option>
+            </optgroup>
+        </Select>
+        <p>
+            <label for="radio">Jag förstår att detta formulär är en del av en programmeringsuppgift</label>
+            <input type="radio" name="radio">
+        </p>
+
+        <p>
+            <label for="pic">Ladda upp en fin bild</label>
+            <input type="file" name="fil" id="">
+        </p>
+
+        <input type="submit">
+        <input type="image" src="lib/images/fot.png">
+        <input type="reset">
+        <input type="button" value="Denna knapp gör ingenting">
+
+        </fieldset>
     </form>
 
+    <form method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/courses/05_ass/ip2/2/2.2.2/perl/example.cgi">
+        <fieldset>
+            <p>
+                <label for="pic">Ladda upp en fin bild</label>
+                <input type="file" name="file">
+            </p>
+            <input type="submit">
+        </fieldset>
+    </form>
 
 </body>
+
 </html>
