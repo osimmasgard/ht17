@@ -35,42 +35,101 @@
 
     <p>
         <h2>Cascade</h2>
-        Cascade syftar på i vilken ordning CSS-regler tillämpas och vilken som slutligen gäller. Det finns 3 grundnivåer i vilken CSS kan defineras. Dels så kommer varje webläsare med sin egen CSS-"regelbok" som beskriver hur alla taggar ska visas och bete sig, denna kallas för "User Agent Stylesheet" ("User Agent" betyder fritt översatt "webläsarversion och tillverkare"). Som ett andra steg så kan varje användare ange att en CSS-fil ska tillämpas mot varje websida som besöks (User Stylesheet). På så vis kan man styra att man exempelvis inte vill ha en vit bakgrundsfärg på alla websidor, utan att den ska vara rosa. Den sista nivå som CSS-sätts på är genom den CSS som webutvecklaren har specificerat (Author Stylesheets), antingen direkt i html-koden eller inlänkat från en css-fil. I slaget om vilken css-specifikation som ska gälla för ett visst element så vinner den specifikation som har högst "tyngd". Denna tyngd bestäms utifrån ett regelverk där User Agent Stylesheet har lägst tyngd och Author Stylesheet har högst vikt. Man kan frångå denna ordning i sin User Stylesheet genom lägga till "!important" till den regel ska vara tyngst och på så vis få det som man vill oavsett vad Author Stylesheet har satt för regel.
+        Cascade syftar på i vilken ordning CSS-regler tillämpas och vilken som slutligen gäller. Det finns 3 grundnivåer i vilken
+        CSS kan defineras. Dels så kommer varje webläsare med sin egen CSS-"regelbok" som beskriver hur alla taggar ska visas
+        och bete sig, denna kallas för "User Agent Stylesheet" ("User Agent" betyder fritt översatt "webläsarversion och
+        tillverkare"). Som ett andra steg så kan varje användare ange att en CSS-fil ska tillämpas mot varje websida som
+        besöks (User Stylesheet). På så vis kan man styra att man exempelvis inte vill ha en vit bakgrundsfärg på alla websidor,
+        utan att den ska vara rosa. Den sista nivå som CSS-sätts på är genom den CSS som webutvecklaren har specificerat
+        (Author Stylesheets), antingen direkt i html-koden eller inlänkat från en css-fil. I slaget om vilken css-specifikation
+        som ska gälla för ett visst element så vinner den specifikation som har högst "tyngd". Denna tyngd bestäms utifrån
+        ett regelverk där User Agent Stylesheet har lägst tyngd och Author Stylesheet har högst vikt. Man kan frångå denna
+        ordning i sin User Stylesheet genom lägga till "!important" till den regel ska vara tyngst och på så vis få det som
+        man vill oavsett vad Author Stylesheet har satt för regel.
     </p>
     <p>
         <h2>Selektorer</h2>
-        Selektorerna berättar för webläsaren som tolkar CSS:en <em>var</em> regeln ska sättas. Exempelvis kan varje html-tagg vara en selektor i sig, dvs om vi i CSS-filen skriver att för <code>&lt;body&gt;</code> ska regeln "background-color: grey" sättas, så är body i det här fallen en selektor.
+        Selektorerna berättar för webläsaren som tolkar CSS:en
+        <em>var</em> regeln ska sättas. Exempelvis kan varje html-tagg vara en selektor i sig, dvs om vi i CSS-filen skriver
+        att för
+        <code>&lt;body&gt;</code> ska regeln "background-color: grey" sättas, så är body i det här fallen en selektor.
 
         <p>
             Det finns olika typer av selektorer:
             <ol>
                 <li>
-                   Tagg-selektorer används för att styra element med en viss tagg, exempelvis taggen <code>&lt;body&gt;</code>.
+                    Tagg-selektorer används för att styra element med en viss tagg, exempelvis taggen
+                    <code>&lt;body&gt;</code>.
                 </li>
-                <li>Attribut-selektorn pekar på element som har ett visst attribut satt, exempelvis om ett visst element har attributet "target" satt såsom här: <code>&lt;a target="_blank"&gt;</code></li> så kommer attribut-selektorn kunna styra alla element med "target" satt. Det går även att styra så att attribut med ett visst värde enbart, exempelvis 'target="_blank"'
-                <li>ID-selektorer är sådan som pekar på element där ett visst id har satts. Exempelvis: <code>&lt;img src="lib/images/fot.png" id="bild"&gt;</code></li>
-                <li>Klass-selektorer är sådan som pekar på element där en viss klass har satts. Exempelvis: <code>&lt;img src="lib/images/fot.png" class="bild"&gt;</code></li>
-                <li>Barn-selektorer pekar på element som är barn av ett annat element, exempelvis <code>ul li { margin: 0 0 5px 0; }</code> som pekar på "list-items" som är barn till "unordered lists". Denna relation måste således finnas för att css-stylen ska appliceras.</li>
+                <li>Attribut-selektorn pekar på element som har ett visst attribut satt, exempelvis om ett visst element har
+                    attributet "target" satt såsom här:
+                    <code>&lt;a target="_blank"&gt;</code>
+                </li> så kommer attribut-selektorn kunna styra alla element med "target" satt. Det går även att styra så att attribut
+                med ett visst värde enbart, exempelvis 'target="_blank"'
+                <li>ID-selektorer är sådan som pekar på element där ett visst id har satts. Exempelvis:
+                    <code>&lt;img src="lib/images/fot.png" id="bild"&gt;</code>
+                </li>
+                <li>Klass-selektorer är sådan som pekar på element där en viss klass har satts. Exempelvis:
+                    <code>&lt;img src="lib/images/fot.png" class="bild"&gt;</code>
+                </li>
+                <li>Barn-selektorer pekar på element som är barn av ett annat element, exempelvis
+                    <code>ul li { margin: 0 0 5px 0; }</code> som pekar på "list-items" som är barn till "unordered lists". Denna
+                    relation måste således finnas för att css-stylen ska appliceras.</li>
             </ol>
         </p>
     </p>
     <p>
         <h2>Enheter</h2>
-        Historien varför CSS har flera måttenheter finns att hitta i tryckkonstens historia. Man har därför fler måttenheter än vad som borde behövas för att tillfredsställa olika typer av användare.
+        Historien varför CSS har flera måttenheter finns att hitta i tryckkonstens historia. Man har därför fler måttenheter än vad
+        som borde behövas för att tillfredsställa olika typer av användare.
         <ul>
             <li>in: står för "inches", dvs måttenheten tum.</li>
             <li>cm: står för centimeter.</li>
             <li>mm: står för måttenheten millimeter.</li>
             <li>pt: står för måttenheten "point".</li>
             <li>pc: står för måttenheten "pica".</li>
-            <li>px: står för "pixel" och syftar till datornskärmens pixlar. Denna måttenhet gör att det ser olika ut beroende på vilken pixelmängd man har på skärmen eftersom avstånden mäts i antalet pixlar.</li>
-            <li>em: är en måttenheten som används för typsnitt, fonter. Den är relativ och inte absolut som de ovan, vilket betyder att den kommer se olika ut på olika skärmar, men med målsättningen att se relativt sett bra ut oberoende av skärm, dvs den krymper och blir större i relation med skärmen. </li>
-            <li>ex: denna relativa måttenhet används sällan. Den är knuten till ett typsnitts "x-height" som är olika för olika fonter, dock kan man säga att den är ungefär höjden på gemenerna a, c, m eller o.</li>
-            <li>%: syftar till procenten av storleken av det omgivande elementet, eller procenten av normalstorleken av elementet. Exempelvis: <code>p {font-size: 16pt; line-height: 125%;}</code> </li>
+            <li>px: står för "pixel" och syftar till datornskärmens pixlar. Denna måttenhet gör att det ser olika ut beroende
+                på vilken pixelmängd man har på skärmen eftersom avstånden mäts i antalet pixlar.</li>
+            <li>em: är en måttenheten som används för typsnitt, fonter. Den är relativ och inte absolut som de ovan, vilket betyder
+                att den kommer se olika ut på olika skärmar, men med målsättningen att se relativt sett bra ut oberoende
+                av skärm, dvs den krymper och blir större i relation med skärmen. </li>
+            <li>ex: denna relativa måttenhet används sällan. Den är knuten till ett typsnitts "x-height" som är olika för olika
+                fonter, dock kan man säga att den är ungefär höjden på gemenerna a, c, m eller o.</li>
+            <li>%: syftar till procenten av storleken av det omgivande elementet, eller procenten av normalstorleken av elementet.
+                Exempelvis:
+                <code>p {font-size: 16pt; line-height: 125%;}</code>
+            </li>
         </ul>
         <p>
             Här är skillnaden mellan de absoluta måttenheterna (förutom px): 1in = 2.54cm = 25.4mm = 72pt = 6pc
         </p>
+    </p>
+    <p>
+        <h2>
+            Hur ett CSS-dokument är uppbyggt
+        </h2>
+        I ett CSS-dokument så listar man upp sina selektorer och hur de ska deklareras (styras), det är inte mer komplicerat än så!
+        Exempelvis:
+
+        <code>selektor { attribut1: värde1 ; attribut2: värde2}</code>
+
+    </p>
+
+    <p>
+        <h2>Övriga uppgifter inom CSS-blocket</h2>
+
+        <ul>
+            <li>2.2 Text och listor obligatorisk (CSS: 6)</li>
+            <li>2.3 Marginaler kantlinjer och paddning obligatorisk (CSS: 7)</li>
+            <li>2.4 Bilder och bakgrunder obligatorisk (CSS: 8)</li>
+            <li>2.5 Navigering obligatorisk (CSS: 9)</li>
+            <li>2.6 Tabeller och formulär obligatorisk (CSS: 11)</li>
+            <li>2.7 Sidlayout obligatorisk (CSS: 12-14, 16-17)</li>
+            <li>2.8 Anpassning till olika enheter obligatorisk (CSS: 15, HTML 7)</li>
+            <li>2.9 Nerladdad font frivillig (CSS: 6, HTML: 6)</li>
+            <li>2.10 Övergångar frivillig (CSS: 10)</li>
+        </ul>
+
     </p>
 
 </body>
