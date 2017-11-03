@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='sv'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>IB908C</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Övning 2.1</h1>
+    </header>
+
+    <p>
+        <h2>Externt länkade CSS-filer</h2>
+        CSS används för att styra formattering och utseende på en websida. Har man en stor websida där man önskar göra en mängd undantag
+        från default-reglerna (mer om dessa senare) så är det bättre att lyfta ut CSS-reglerna till en extern fil som man
+        sedan länkar in i sin webbsida. Skulle reglerna var specificerade i samma fil så skulle dokumentet vara svårt att
+        läsa och överblicka, och ändringar skulle inte göras lika lätt. En annan fördel med att lägga reglerna i en extern
+        fil är att man då enkelt kan länka in dem i flera dokument, och på så vis centraliserat styra utseendet på sin webbplats.
+    </p>
+
+    <p>
+        <h2>Arv</h2>
+        Inom programmeringen är "arv" en vanligt förekommande företeelse. Anledningen till detta är man ofta bygger upp strukturer
+        och att det uppstår relationer mellan elementen i dessa, man talar om "förälder" och "barn" (eng: parent/child),
+        eller "branch" och "leaf". En förälder ligger hierariskt på en högre nivå än ett barn och precis som i verkligheten
+        så kan ett barn ärva egenskaper från sin förälder även inom programmeringens värld. Inom CSS så används denna regel
+        i högsta grad, så placerar man element inom andra element så kommer vissa egenskaper ärvas ner från det yttre elementet.
+        De vanligaste egenskaperna som omfattas av arv är de som har med textutseende etc att göra, andra egenskaper som
+        inte lämpar sig lika bra att ärva ner omfattas inte av arvregeln.
+
+    </p>
+
+    <p>
+        <h2>Cascade</h2>
+        Cascade syftar på i vilken ordning CSS-regler tillämpas och vilken som slutligen gäller. Det finns 3 grundnivåer i vilken CSS kan defineras. Dels så kommer varje webläsare med sin egen CSS-"regelbok" som beskriver hur alla taggar ska visas och bete sig, denna kallas för "User Agent Stylesheet" ("User Agent" betyder fritt översatt "webläsarversion och tillverkare"). Som ett andra steg så kan varje användare ange att en CSS-fil ska tillämpas mot varje websida som besöks (User Stylesheet). På så vis kan man styra att man exempelvis inte vill ha en vit bakgrundsfärg på alla websidor, utan att den ska vara rosa. Den sista nivå som CSS-sätts på är genom den CSS som webutvecklaren har specificerat (Author Stylesheets), antingen direkt i html-koden eller inlänkat från en css-fil. I slaget om vilken css-specifikation som ska gälla för ett visst element så vinner den specifikation som har högst "tyngd". Denna tyngd bestäms utifrån ett regelverk där User Agent Stylesheet har lägst tyngd och Author Stylesheet har högst vikt. Man kan frångå denna ordning i sin User Stylesheet genom lägga till "!important"
+
+    </p>
+
+</body>
+
+</html>
