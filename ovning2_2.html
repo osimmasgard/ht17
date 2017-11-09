@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='sv'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>IB908C</title>
+    <link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+<body>
+    <header>
+        <h1>Övning 2.2</h1>
+    </header>
+
+    <p>
+        <h2>
+            Font-familjer
+        </h2>
+        Fonter (typsnitt) kan kategoriseras utifrån ett par egenskaper. Tre vanliga kategorier, eller fontfamiljer som det också
+        kallas är:
+        <ul>
+            <li>Serif</li>
+            <li>Sans-serif</li>
+            <li>monospace</li>
+        </ul>
+
+        <h3>Serif</h3>
+        Seriff (även serif), klack eller schattering, är de tvärstreck som avslutar den bokstavsstapel som utgör en bokstav eller
+        ett tecken i en teckenuppsättning. (källa:
+        <a href="https://sv.wikipedia.org/wiki/Seriff">https://sv.wikipedia.org/wiki/Seriff</a>) Typsnitt som hör till den familjen är således mer "snirkliga" och anses
+        passa vissa typer av texter.
+
+        <h3>Sans-serif</h3>
+        Denna fontfamilj innehåller fonter som saknar dessa extra små streck och ser därför lite mer stilistiska ut. De kan uppfattas
+        som lättare att läsa då de är lite mindre konstnärliga än Serif-familjens typsnitt.
+
+        <h3>Monospace</h3>
+        Denna familj innehåller typsnitt som är designade så att varje bokstav upptar exakt samma bredd på skärmen, de passar bra
+        i terminaler eller tekniska texter där man använder uppställningar av olika slag som ser bättre ut om bokstäver hamnar
+        exakt under varandra exempelvis.
+    </p>
+
+    <p>
+        <h3>Font-size</h3>
+        Som nämnts tidigare så kan storleken på en font vara antingen absolut eller relativ. En absolut font-storlek kan också sättas
+        i förhållande till ett defaultvärde. När vi pratar om nyckelorden xx-small, x-small, small, medium, large, x-large,
+        xx-large så förhåller dessa sig till default-värdet "medium". Man kan också använda % för att sätta fontstorleken,
+        denna beräknas dock på vilket värde föräldern har och kommer således inte vara lika stor varje tillfälle den används.
+
+        <h4>em</h4>
+        "em" är ett dynamiskt attribut. 1 em "defaultar" till det värde du satt på förälderns fontstorlek, och har du inte satt något
+        alls så är det oftast 16px stort. 2em blir då 32px stort. Em är praktiskt eftersom det anpassar sig till den storlek
+        som användaren valt att ha på sin defaultfont.
+    </p>
+
+
+    <p>
+        <h3>Textegenskaper</h3>
+
+
+        <h4>Color:</h4> Med
+        <span class="blue">detta attribut</span> så kan man ändra färg på texten. Exempel:
+        <code>
+            span.blue { color:blue}
+        </code>
+
+        Man kan även använda egendefinerade färger som för denna text.
+        <span class="owncolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        </span>
+
+        <code>span.owncolor { color:#BF6D5B }</code>
+
+        <p class="specialfont"> Den här texten är kontrollerad i en rad aspekter gällande fonten, nämligen </p>
+
+        <p>
+            <code>
+                .specialfont { font-family: serif; font-size: 14px; font-size-adjust: 1.2; font-style: oblique; font-variant: normal; font-weight:
+                600; }
+            </code>
+        </p>
+
+        <p class="specialfont">
+            Som visas ovan så är font-familjen av typen "serif", storleken bestämd till absoluta 14 pixlar. Fonten kommer att justeras
+            om den valda fonten inte kan hittas av webläsaren, detta styrs med font-size-adjust och fungerar så att webläsaren
+            nu vet att om den kommer att behöva använda en annan font än den önskade så ska dess storlek justeras till 1.2.
+            På så vis så kommer teckenstorleken bli ungefär lika stor oavsett vilken font som används på sidan i slutändan.
+
+            <code>Font-style</code> är bestämd till oblique, vilket är en form som påminner väldigt mycket om "italic", men som
+            har en del väldigt specifika skillnader som jag inte kommer att gå in på här.
+            <code>fond-variant</code> satte jag till "inherit" vilket betyder att den kommer att ärva stilen från sin förälder.
+            Slutligen så satte jag
+            <code>font-weight</code> till det absoluta värdet "bolder" vilket syftar på texten kommer vara av det lite fetare slaget.
+
+        </p>
+
+    </p>
+
+    <p>
+        <code>list-style</code> används för att styra alla CSS-inställningar som kan göras på html-listorna "unordered list"
+        <code>&lt;ul&gt;</code> eller "ordered list"
+        <code>&lt;ol&gt;</code>. Det finns en mängd olika inställningar för listor, här är ett exempel:
+        <p>
+            <code>ul.superlista {list-style: inside outside url("lib/images/fot.png")} </code>
+        </p>
+        <p>
+            Och här är resultatet: 
+            
+            <ul class="superlista">
+                <li>Första item</li>
+                <li>Andra item</li>
+                <li>Tredje item</li>
+
+
+            </ul>
+        </p>
+    </p>
+
+</body>
+
+</html>

@@ -1,6 +1,28 @@
+
+span.blue {
+  color: blue
+}
+
+span.owncolor {
+  color: #BF6D5B
+}
+
+.specialfont {
+  font-family: serif;
+  font-size: 14px;
+  font-size-adjust: 1.2; 
+  font-style: oblique;
+  font-variant: inherit;
+  font-weight:  bolder;
+}
+
+ul.superlista {
+  list-style: square outside url("../images/litenpunkt.png");
+}
+
+
 body {
     margin: 5%;
-    background: #000; 
   }
   video { 
       position: fixed;
