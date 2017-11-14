@@ -2,55 +2,114 @@
 <html lang='sv'>
 
 <head>
-<meta charset='utf-8'>
-<title>IB908C</title>
-<link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
+    <meta charset='utf-8'>
+    <title>IB908C</title>
+    <link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
 </head>
 
 <body>
-<header>
-    <h1>
-        Övning 2.3
-    </h1>
-</header>
+    <header>
+        <h1>
+            Övning 2.3
+        </h1>
+    </header>
 
-<p>
-<h3>Boxmodellen</h3>
-HTML-element kan liknas vid lådor och det är dessa lådor man med hjälp av CSS flyttar runt i förhållande till varandra för att bygga upp designen av en HTML-sida. Det är detta som Boxmodellen syftar på. Boxen runt ett element består av marginaler, kanter, paddning. 
+    <p>
+        <h3>Boxmodellen</h3>
+        HTML-element kan liknas vid lådor och det är dessa lådor man med hjälp av CSS flyttar runt i förhållande till varandra för
+        att bygga upp designen av en HTML-sida. Det är detta som Boxmodellen syftar på. Boxen runt ett element består av
+        marginaler, kanter, paddning.
 
-</p>
+    </p>
 
-<p>
+    <p>
 
-    <h3>Exempel</h3>
+        <h3>Exempel</h3>
         <h4>
             Marginaler
         </h4>
-        Här ser du att marginalen är satt till 5% i relation till omgivande box som i det här fallet är den paragraf <code>&lt;p&gt;</code> som <code>&lt;span&gt;</code>-taggen är en del av. För att göra det tydligare så har jag satt en ram runt blocket.
-        <span class="margin">WOOOT</span> <code>&lt;span class="margin"&gt;WOOOT &lt;/span&gt;</code>
-        
-
-<h4>Kantlinjer</h4>
-        Kantlinjer:
-        border
-        border-color
-        border-style
-        border-width
-        Paddning: padding
-        Outlines: outline
-
-        Synlighet: visibility, clip-path, display, overflow
-
-        Beskriv och exemplifiera även hur man kan få en box:
-        
-        Som är transparant till en viss grad (se rgba och opacity)
-        Som har rundade hörn (se border-radius)
-        Som har multippla bakgrundsbilder
-        Som har skuggor (se box-shadow)
-        Som har gradienter (se linear-gradient och radial-gradient)
-
-</p>
+        Här är ett exempel på när marginalen är satt till 5% i relation till omgivande box som i det här fallet är den paragraf
+        <code>&lt;p&gt;</code> som
+        <code>&lt;span&gt;</code>-taggen är en del av. För att göra det tydligare så har jag satt en ram runt blocket.
+        <span class="margin">WOOOT</span>
+        <code>&lt;span class="margin"&gt;WOOOT &lt;/span&gt;</code>
 
 
+        <h4>Kantlinjer</h4>
+        Kantlinjer styr en kantmarkering runt elementet. Attributet "border" är ett komposit attribut i vilket du kan lista en rad
+        olika egenskaper så som
+        <ul>
+            <li>
+                border-color (kantens färg)
+            </li>
+            <li>
+                border-style (om den ska vara heldragen, punkter, små korta linjer etc)
+            </li>
+            <li>
+                border-width (som används för att sätta tjockleken på kanten)
+            </li>
+        </ul>
+
+        <h4>Paddning</h4>
+        Attributet "padding" styr med hjälp av måttenheterna (se övning 2.1) avstånden till toppen, botten, höger och vänster. Exempel:
+        <p>
+            span.padding {
+            <div class="leftindent">
+                padding-top: 50px;
+                <br> padding-right: 30px;
+                <br> padding-bottom: 50px;
+                <br> padding-left: 80px;
+            </div>
+            }
+        </p>
+
+        <h4>
+            Synlighet
+        </h4>
+
+        Med hjälp av "visibility" så kan man ändra om elementet ska synas eller inte, bland annat. Attributet "clip-path" gör så
+        att man kan endast välja att visa en del av ett element ska synas, och att resten ska vara osynligt. Attributet "display"
+        bestämmer "boxens" förhållande gentemot omkringliggande element. Använder man värdet "block" så beter sig boxen som
+        friliggande, med tomma rader innan och efter. "Inline" betyder att det ligger i samma nivå som omliggande element.
+        Det finns även andra värden man kan laborera med. Overflow: detta attribut bestämmer vad som ska hända med elementet
+        om det är för stort för att visas inom en viss area (liten displayport eller föminskat fönster). Man kan exempelvis
+        sätta värdet "scroll" som i dessa fall lägger till en scrollbar till elementet. Eller så väljer man att dölja den
+        del som inte syns med "hidden".
+
+        <h4>Transparens etc</h4>
+
+        Här är en box som är delvis transparent, har rundade hörn och multipla bakgrundsbilder, den har även en skugga i rött.
+
+        <div class="weirdbox"> </div>
+
+        div.weirdbox {
+        <div class="leftindent">
+            margin-bottom: 2em;
+            <br> padding: 50px;
+            <br> background: url("../images/poster.png"), url("../images/fot.png");
+            <br> border-radius: 5px;
+            <br> box-shadow: 10px 10px 5px #b93030;
+            <br> opacity: 0.7;
+            <br>
+        </div>
+        }
+
+
+        <p>
+            Här är en box som använder en gradient bakgrund
+            <div class="weirdbox2"> </div>
+
+            div.weirdbox2 {
+            <div class="leftindent"></div>margin-bottom: 2em;
+            <br> padding: 50px;
+            <br> background: linear-gradient(red, yellow);
+            <br> border-radius: 5px;
+            <br>
+            <div>
+                }
+
+        </p>
+    </p>
 </body>
+
 </html>
