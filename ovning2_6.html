@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='sv'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>IB908C</title>
+    <link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Övning 2.6
+        </h1>
+    </header>
+    <h2>Tabeller</h2>
+    <p>
+        Tabeller innehåller data i matrisform. Här är en tabell där table-layout är satt till "fixed". Det betyder att tabellens kolumner inte kommer anpassa sig efter innehållet i dem utan vara lika breda hela tiden. Denna approach är snabbare för webbläsaren att rendera än "auto", som betyder att webbläsaren först måste läsa igenom innehållet i alla celler innan den kan bestämma vilken bredd de ska ha.
+        <p>
+            table {
+            <span class="leftindent">table-layout: fixed;</span>
+            }
+        </p>
+
+        <table>
+            <th>En massa hej</th>
+            <tr>
+                <td>hej1</td>
+                <td>hej2 </td>
+                <td>hej3</td>
+            </tr>
+            <tr>
+                <td>hej1</td>
+                <td>hej2 </td>
+                <td>hej3</td>
+            </tr>
+        </table>
+    </p>
+
+    <h2>
+        CSS med formulär
+    </h2>
+
+    Formulär kan också styras med hjälp av CSS. Här är ett exempel:
+
+    <p>
+        input[type=text] {
+            <span class="leftindent">
+                border: none; <br>
+                border-bottom: 2px solid red;
+    
+            </span>        }
+    
+    </p>
+    Exemplet visar att alla input-fält (som är vanliga i formulär) ska ha en undre kant som är röd och 2 pixlar bred.
+
+    <p>
+        <code>
+                     &lt;form action=""&gt; 
+                     <span class="leftindent"> &lt;input type="text"&gt; </span>           
+                        &lt;/form&gt;     
+        </code>
+    
+    </p>
+    <form action="">
+        <input type="text"> 
+
+    </form>
+
+</body>
+
+</html>
