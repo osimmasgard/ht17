@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='sv'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>IB908C</title>
+    <link rel="stylesheet" href="lib/css/master.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Övning 2.7
+        </h1>
+        <h2>Webbsidelayouter (fixerad, flytande och elastisk)</h2>
+    </header>
+
+    <p>
+        Hur man programmatiskt väljer att designa sin hemsida kommer att ha en påverkan på användarens upplevelse av webbsidan. Det
+        är flera faktorer som en webbutvecklare måste ta hänsyn till, exempelvis:
+
+        <ul>
+            <li>Besökarens skärmupplösning</li>
+            <li>Vilken webbläsare som används</li>
+            <li>Om fönstret är maximerat, har verktygsfält öppna etc</li>
+            <li>Vilken hårdvara besökaren använder</li>
+        </ul>
+
+        Vilken webbsidelayout man väljer kommer att få konsekvenser för de saker jag listade så det kan vara viktigt att välja rätt.
+        Det första stora valet är huruvida man vill använda CSS eller tabeller för att skapa layouten, då det går att använda
+        båda. CSS anses av de flesta vara det bästa sättet av främst dessa anledningar:
+
+        <ul>
+            <li>Webbsidan blir lättare att arbeta med eftersom man lyfter ut designen från innhållet i en css-fil</li>
+            <li>Tabeller kräver många fler taggar för att bygga upp sidan, det blir fort rörigt! Exempelvis
+                <code>&lt;table&gt;, &lt;tr&gt;</code> och
+                <code>&lt;td&gt;</code>
+            </li>
+            <li>Eftersom det finns beroenden mellan rader och kolumner så blir det lätt krångligt att uppdatera en komplex webbsida
+                utan att ha sönder den relationen</li>
+            <li>Webbläsare måste lägga ner mer tid för att rendera en sida som är uppbyggd med hjälp av tabeller då den måste
+                läsa igenom sidan ett par gånger innan den kan ta vissa renderingsbeslut.</li>
+        </ul>
+
+        Här kommer en kort genomgång av de metoder man kan välja mellan om man använder CSS som layotmetod:
+    </p>
+    <p>
+        En
+        <strong>fixerad layout</strong> använder en fast ram runt elementen som bygger upp sidan. Elementen innanför ramen styr man
+        sedan storleken på genom att använda storleksmåttet %. På så vis kommer användare av olika skärmstorlekar/upplösning
+        alltid att få rätt proportioner på de element som finns på sidan. Det svåra här är att välja rätt storlek på den
+        fasta ramen.
+    </p>
+
+    <p>
+        En
+        <strong>flytande layout</strong> använder ingen fast ram runt elementen, utan de använder sig enbart av procentenheten för
+        styrning av elementens bredd.
+    </p>
+
+    <p>
+        Den sista layouttypen,
+        <strong>elastisk</strong>, tar sig an problemet med hjälp av "em". Måttenheten em, som beskrevs i övning 2.2 är ett dynamiskt
+        attribut som har en relation till en användarens förvalda fontstorlek. Denna storlek är olika på skärmar med olika
+        upplösning, vilket gör att en "em" är väldigt användbart som måttenhet. Det som talar emot denna layouttyp är att
+        den är mer tidskrävande att utveckla med och det kan vara svårare att testa sig fram till en bra konfiguration för
+        just den webbsida man utvecklar.
+    </p>
+
+
+    <h3>
+        Några viktiga attribut
+    </h3>
+    <p>
+          <h4>Position</h4> 
+          
+          h2 {
+            <span class="leftindent">
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        </span>}
+
+        Position kan vara static,absolute, fixed, relative, sticky, initial eller inherit där static är defaultvärdet. <strong>Static</strong>
+         betyder att element ritas ut i den ordning som de är skrivna i html-dokumentet. <strong>Absolute</strong> betyder att elementet är placerat i absolut relation med föräldraelementet. <strong>Fixed</strong> betyder att elementet är placerat i relation till webbläsarfönstret. <strong>Relative</strong> betyder att elementet är placerat i relation till den position det skulle ha normalt sett. <strong>Sticky</strong> betyder att positionen är relativ till hur långt besökaren scrollat på webbsidan. <strong>Initial</strong> sätter tillbaka värdet till grundvärdet. Slutligen: <strong>inherit</strong>, bestämmer att elementet ärver egenskapen "position" från sin förälder.
+            <ul>
+                <li>top: styr avståndet till nästa element ovanför</li>
+                <li>left: styr avståndet till elementet till vänster</li>
+                <li>bottom: styr avståndet till elementet under detta</li>
+                <li>right: styr avståndet till elementet till höger</li>
+                <li>z-index: styr hur element ska synas om de ligger ovanför varandra. Ett högre värde gör att den relativt de andra elementen hamnar högre upp i stapeln och därmed ligger ovanpå ett element med ett lägre z-index</li>
+                <li>float: används ofta för att få element att flyta vid sidan av andra element, exempelvis en bild vid sidan av en text</li>
+                <li>clear: används för att styra om element ska tillåtas "floatas" vid sidan av detta element eller inte. Man kan tillåta att detta görs på vissa sidor enbart.</li>
+            </ul>
+
+            <h4>Storlek</h4>
+            <ul>
+                <li>width: styr bredden på elementet</li>
+                <li>height: styr höjden på elementet</li>
+                <li>max-width: styr elementets maximala bredd </li>
+                <li>max-height: styr elementest maximala höjd</li>
+                <li>min-width: styr elementets minimala bredd</li>
+                <li>min-height: styr elementets minimala höjd</li>
+                <li>vertical-align: styr hur elementet ska placeras i höjdled i det element som det är en del av</li>
+            </ul>
+
+            Position: position, top, left, bottom, right, z-index, float, clear
+            Storlek: width, height, max-width, max-height, min-width, min-height, vertical-align
+
+
+
+    </p>
+
+
+
+    <p>Nedan följer tre exempelsidor som visar praktiskt</p>
+
+
+
+</body>
+
+</html>
