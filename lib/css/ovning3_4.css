@@ -1,4 +1,28 @@
 .content {
   color: blue;
-  position:absolute;
+  position: absolute;
+}
+
+img {
+  float: right;
+}
+
+.preload-01 {
+  background: url('../images/cykelliten.jpg') no-repeat -9999px -9999px;
+}
+
+.preload-02 {
+  background: url('../images/cykel.jpg') no-repeat -9999px -9999px;
+}
+
+.rollover {
+  display: block;
+  width: 400px;
+  height: 300px;
+  background: url(../images/cykel.jpg);
+  transition: all .7s ease-in-out;
+}
+
+.rollover:hover {
+  background: url(../images/cykelliten.jpg)
 }
